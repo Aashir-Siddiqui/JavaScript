@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 100%;
+	background: linear-gradient(-45deg, #1d2a35, #173629, #04462d, #1c312c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.btn{
+    background: white;
+    border: 0;
+    outline: none;
+    color: #1d2a35;
+    border-radius: 40px;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px 60px;
+    cursor: pointer;
+}
+.popup{
+    width: 400px;
+    background: white;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0px 30px 30px;
+    color: #1d2a35;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.showPopup{
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup i{
+    font-size: 60px;
+    background: #04aa6d;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.popup h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.popup p{
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+.popup button{
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    background: #04aa6d;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .popup{
+        width: 250px;
+    }
+    .popup p{
+        font-size: 14px;
+    }
+}
