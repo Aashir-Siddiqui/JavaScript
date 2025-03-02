@@ -131,28 +131,98 @@
 
 // OOP 
 
-class user{
-    // constructor Method
-    constructor (name, age){
-        this.userName = name;
-        this.userAge = age;
-        console.log("Constructor Function")
-    }
+// class user {
+//     // constructor Method
+//     constructor(name, age) {
+//         this.userName = name;
+//         this.userAge = age;
+//         console.log("Constructor Function")
+//     }
 
-    // Prototype Method 
-    hello(){
-        console.log(`My name is ${this.userName} and i am ${this.userAge} years old.`)
-    }
+//     // Prototype Method 
+//     hello() {
+//         console.log(`My name is ${this.userName} and i am ${this.userAge} years old.`)
+//     }
 
-    // Static Method 
-    static staticMethod(){
-        console.log("Static Function")
+//     // Static Method 
+//     static staticMethod() {
+//         console.log("Static Function")
+//     }
+// }
+
+// let a = new user("Aashir", 17)
+// console.log(a)
+
+// a.hello()
+
+// user.staticMethod()
+
+
+// Class Inheritance
+
+// class employee{
+//     constructor (name){
+//         console.log(`Constructor: Employee ${name}`)
+//     }
+// }
+
+// class manager extends employee{
+//     constructor(name){
+//         super()
+//         console.log(`Constructor: Manager ${name}`)
+//     }
+// }
+
+// let a = new manager("Aashir")
+// console.log(a)
+
+class employee {
+    constructor(name, age, salary) {
+        this.employeeName = name
+        this.employeeAge = age
+        this.employeeSalary = salary
+        console.log(`Constructor: Employee`)
+    }
+    info() {
+        document.write(`
+            <h2>Employee Class<h2>
+            Name : ${this.employeeName} <br>
+            Age : ${this.employeeAge} <br>
+            Salary : ${this.employeeSalary} <br>
+            `)
     }
 }
 
-let a = new user("Aashir", 17)
-console.log(a)
+class manager extends employee {
+    info() {
+        let bonus = 10000
+        let totalSalary = this.employeeSalary + bonus
+        document.write(`
+            <h2>Manager Class<h2>
+            Name : ${this.employeeName} <br>
+            Age : ${this.employeeAge} <br>
+            Salary : ${totalSalary} <br>
+            `)
+    }
+}
 
-a.hello()
+class GM extends manager {
+    info() {
+        let bonus = 10000
+        let travelAlaince = 20000
+        let GMSalary = this.employeeSalary + travelAlaince + bonus
+        document.write(`
+            <h2>GM Class<h2>
+            Name : ${this.employeeName} <br>
+            Age : ${this.employeeAge} <br>
+            Salary : ${GMSalary} <br>
+            `)
+    }
+}
 
-user.staticMethod()
+let a = new GM("Ahmed", 22, 40000)
+let b = new manager("Aashir", 17, 40000)
+let c = new employee("Ali", 20, 40000)
+a.info()
+b.info()
+c.info()
