@@ -176,53 +176,95 @@
 // let a = new manager("Aashir")
 // console.log(a)
 
-class employee {
-    constructor(name, age, salary) {
-        this.employeeName = name
-        this.employeeAge = age
-        this.employeeSalary = salary
-        console.log(`Constructor: Employee`)
-    }
-    info() {
-        document.write(`
-            <h2>Employee Class<h2>
-            Name : ${this.employeeName} <br>
-            Age : ${this.employeeAge} <br>
-            Salary : ${this.employeeSalary} <br>
-            `)
-    }
+// class employee {
+//     constructor(name, age, salary) {
+//         this.employeeName = name
+//         this.employeeAge = age
+//         this.employeeSalary = salary
+//         console.log(`Constructor: Employee`)
+//     }
+//     info() {
+//         document.write(`
+//             <h2>Employee Class<h2>
+//             Name : ${this.employeeName} <br>
+//             Age : ${this.employeeAge} <br>
+//             Salary : ${this.employeeSalary} <br>
+//             `)
+//     }
+// }
+
+// class manager extends employee {
+//     info() {
+//         let bonus = 10000
+//         let totalSalary = this.employeeSalary + bonus
+//         document.write(`
+//             <h2>Manager Class<h2>
+//             Name : ${this.employeeName} <br>
+//             Age : ${this.employeeAge} <br>
+//             Salary : ${totalSalary} <br>
+//             `)
+//     }
+// }
+
+// class GM extends manager {
+//     info() {
+//         let bonus = 10000
+//         let travelAlaince = 20000
+//         let GMSalary = this.employeeSalary + travelAlaince + bonus
+//         document.write(`
+//             <h2>GM Class<h2>
+//             Name : ${this.employeeName} <br>
+//             Age : ${this.employeeAge} <br>
+//             Salary : ${GMSalary} <br>
+//             `)
+//     }
+// }
+
+// let a = new GM("Ahmed", 22, 40000)
+// let b = new manager("Aashir", 17, 40000)
+// let c = new employee("Ali", 20, 40000)
+// a.info()
+// b.info()
+// c.info()
+
+
+// Promise 
+
+let prom = (complete) => {
+    return new Promise(x = (resolve, reject) => {
+        console.log("Feteching data...")
+        setTimeout(()=>{
+            if(complete){
+                resolve("I am successful 😎")
+            }else{
+                reject("I am failed 😭")
+            }
+        }, 3000)
+    })
 }
 
-class manager extends employee {
-    info() {
-        let bonus = 10000
-        let totalSalary = this.employeeSalary + bonus
-        document.write(`
-            <h2>Manager Class<h2>
-            Name : ${this.employeeName} <br>
-            Age : ${this.employeeAge} <br>
-            Salary : ${totalSalary} <br>
-            `)
-    }
+prom(true).then((result)=>{
+    console.log(result)
+}).catch((error)=>{
+    console.log(error)
+})
+
+let division = (a, b) => {
+    return new Promise(x = (resolve, reject) => {
+        console.log("Feteching data...")
+        let c = a / b
+        setTimeout(()=>{
+            if(a, b){
+                resolve(`The divisio value of a and b is : ${c}`)
+            }else{
+                reject("Failed to division")
+            }
+        }, 3000)
+    })
 }
 
-class GM extends manager {
-    info() {
-        let bonus = 10000
-        let travelAlaince = 20000
-        let GMSalary = this.employeeSalary + travelAlaince + bonus
-        document.write(`
-            <h2>GM Class<h2>
-            Name : ${this.employeeName} <br>
-            Age : ${this.employeeAge} <br>
-            Salary : ${GMSalary} <br>
-            `)
-    }
-}
-
-let a = new GM("Ahmed", 22, 40000)
-let b = new manager("Aashir", 17, 40000)
-let c = new employee("Ali", 20, 40000)
-a.info()
-b.info()
-c.info()
+division(9,).then((result)=>{
+    console.log(result)
+}).catch((error)=>{
+    console.log(error)
+})

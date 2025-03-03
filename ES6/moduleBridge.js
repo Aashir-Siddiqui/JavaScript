@@ -1,0 +1,1 @@
+export * as abc from "./module2.js"
