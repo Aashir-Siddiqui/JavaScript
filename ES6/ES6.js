@@ -230,41 +230,87 @@
 
 // Promise 
 
-let prom = (complete) => {
-    return new Promise(x = (resolve, reject) => {
-        console.log("Feteching data...")
-        setTimeout(()=>{
-            if(complete){
-                resolve("I am successful 😎")
-            }else{
-                reject("I am failed 😭")
-            }
-        }, 3000)
-    })
-}
+// let prom = (complete) => {
+//     return new Promise(x = (resolve, reject) => {
+//         console.log("Feteching data...")
+//         setTimeout(()=>{
+//             if(complete){
+//                 resolve("I am successful 😎")
+//             }else{
+//                 reject("I am failed 😭")
+//             }
+//         }, 3000)
+//     })
+// }
 
-prom(true).then((result)=>{
-    console.log(result)
-}).catch((error)=>{
-    console.log(error)
-})
+// prom(true).then((result)=>{
+//     console.log(result)
+// }).catch((error)=>{
+//     console.log(error)
+// })
 
-let division = (a, b) => {
-    return new Promise(x = (resolve, reject) => {
-        console.log("Feteching data...")
-        let c = a / b
-        setTimeout(()=>{
-            if(a, b){
-                resolve(`The divisio value of a and b is : ${c}`)
-            }else{
-                reject("Failed to division")
-            }
-        }, 3000)
-    })
-}
+// let division = (a, b) => {
+//     return new Promise(x = (resolve, reject) => {
+//         console.log("Feteching data...")
+//         let c = a / b
+//         setTimeout(()=>{
+//             if(a, b){
+//                 resolve(`The divisio value of a and b is : ${c}`)
+//             }else{
+//                 reject("Failed to division")
+//             }
+//         }, 3000)
+//     })
+// }
 
-division(9,).then((result)=>{
-    console.log(result)
-}).catch((error)=>{
-    console.log(error)
-})
+// division(9,2).then((result)=>{
+//     console.log(result)
+// }).catch((error)=>{
+//     console.log(error)
+// })
+
+
+// Promise .all (Jab sab promise resole ya reject hon jab hi promise.all() chalta hai)
+
+// let p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log(`The first promise has been resolved`)
+//         resolve(10)
+//     }, 1000)
+// })
+
+// let p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log(`The second promise has been resolved`)
+//         resolve(20)
+//     }, 2000)
+// })
+
+// let p3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log(`The third promise has been resolved`)
+//         resolve(30)
+//     }, 3000)
+// })
+
+// let promiseCall = (returnData, message) => {
+//     return (resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(`The ${message} has been resolved`)
+//             resolve(returnData)
+//         }, returnData * 100)
+//     }
+// }
+
+// let p1 = new Promise(promiseCall(10, "first"))
+// let p2 = new Promise(promiseCall(20, "second"))
+// let p3 = new Promise(promiseCall(30, "third"))
+
+// var total = 0
+// Promise.all([p1, p2, p3]).then((result) => {
+//     for (var i in result) {
+//         total += result[i]
+//     }
+//     console.log(`Result: ${result}`)
+//     console.log(`Total: ${total}`)
+// }).catch(error => console.log(`Error: ${error}`))
