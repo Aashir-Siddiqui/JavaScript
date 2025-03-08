@@ -64,17 +64,17 @@ let fruits = [
 ]
 
 function myFunc({ quantity }) {
-    return quantity > 200 ? "oK" : "low"
+    return quantity > 200 ? "ok" : "low"
 }
 
 const result = Object.groupBy(fruits, myFunc)
 
-let text = "These fruits are ok: <br>"
+let text = "These fruits are greater then 200: <br>"
 for (let [x, y] of result.ok.entries()) {
     text += y.name + " " + y.quantity + "<br>";
 }
 
-text = "<br>These fruits are low: <br>"
+text += "<br>These fruits are less then 200: <br>"
 for (let [x, y] of result.low.entries()) {
     text += y.name + " " + y.quantity + "<br>";
 }

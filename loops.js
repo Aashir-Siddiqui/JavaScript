@@ -182,3 +182,32 @@ for(let a = 5; a >= 1; a--){
 // 3 2 1
 // 2 1
 // 1
+
+
+// forEach loop
+
+let arr = ["Apple", "Banana", "Kiwi", "Orange", "Mango"]
+arr.forEach((value, index) => {
+    document.write(`${index + 1}: ${value} <br>`)
+})
+
+
+// forin loop
+
+let obj = {
+    name : "Aashir",
+    age : 17,
+    email : "aashir@gmail.com"
+}
+for(let key in obj){
+    document.write(`${key} : ${obj[key]} <br>`)
+}
+
+
+// forof loop
+
+let str = "HelloWorld"
+for(let a of str){
+    document.write(`${a} <br>`)
+}
+
