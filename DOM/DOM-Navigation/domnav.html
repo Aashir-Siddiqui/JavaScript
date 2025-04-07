@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Navigation</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #outer{
+            width: 80%;
+            background-color: bisque;
+            height: 40%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #inner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            height: 30%;
+            background-color: palevioletred;
+            padding: 20px;
+        }
+        #inner > div{
+            width: 80px;
+            height: 80px;
+            background-color: lightblue;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <h2>outer</h2>
+        <div id="inner">
+            <h2 id="child-head">inner</h2>
+            <div>A</div>
+            <div>B</div>
+            <div id="child-C">C</div>
+            <div>D</div>
+            <div id="child-E">E</div>
+        </div>
+    </div>
+    <script src="domnav.js"></script>
+</body>
+</html>
