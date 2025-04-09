@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Contact Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <h2>Contact Manager</h2>
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter name..." name="uname" id="name">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter email..." id="email">
+            <label for="phoneNo">Phone Number</label>
+            <input type="number" name="phone" placeholder="Enter phone no..." id="phoneNo">
+            <label for="image">Profile Picture</label>
+            <input type="file" accept="image/*" id="image">
+            <img src="" id="image-preview" alt="Preview">
+            <button id="submit">Submit</button>
+        </form>
+
+        <button id="clearData">Clear All Data</button>
+
+        <div class="main"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
