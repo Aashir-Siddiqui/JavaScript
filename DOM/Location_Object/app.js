@@ -29,3 +29,19 @@ console.log(location.origin)
 document.getElementById("btn").addEventListener("click", ()=>{
     window.location.replace("https://foodpanda-aashir.netlify.app/index.html")
 })
+
+console.log(history)
+
+console.log(history.length)
+
+document.getElementById("forBtn").addEventListener("click", ()=>{
+    history.forward()
+})
+
+document.getElementById("backBtn").addEventListener("click", ()=>{
+    history.back()
+})
+
+document.getElementById("goBtn").addEventListener("click", ()=>{
+    history.go(1)
+})
