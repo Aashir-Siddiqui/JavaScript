@@ -56,18 +56,37 @@
 // })
 
 
-async function test() {
-    try{
-    const response = await fetch("student_data.json")
-    const student = await response.json()
-    return student
-    }catch(error){
-        console.log(error)
+// async function test() {
+//     try{
+//     const response = await fetch("student_data.json")
+//     const student = await response.json()
+//     return student
+//     }catch(error){
+//         console.log(error)
+//     }
+// }
+
+// test().then((res)=>{
+//     console.log(res)
+// }).catch((err)=>{
+//     console.log(err)
+// })
+
+
+async function makeAsycnRequest() {
+    const url = 'https://fakestoreapi.com/users'
+    try {
+        const response = await fetch(url)
+        if (!response.ok) {
+            throw new Error(`HTTP error status: ${response.status}`)
+        }
+        const data = await response.json()
+        return data
+    } catch (error) {
+        console.log(error.message)
     }
 }
 
-test().then((res)=>{
-    console.log(res)
-}).catch((err)=>{
-    console.log(err)
+makeAsycnRequest().then((users) => {
+    console.log('Usrs:', users)
 })
