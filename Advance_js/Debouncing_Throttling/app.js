@@ -27,7 +27,7 @@ const throttlingCount = () => {
 
 
 const debouncingCount = () => {
-    clearInterval(intervel)
+    clearTimeout(intervel)
 
     intervel = setTimeout(() => {
         d++
